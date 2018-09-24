@@ -12,5 +12,26 @@ pipeline {
                 '''
             }
         }
+        stage('Test') {
+            steps {
+                echo 'Testing'
+                sh '''
+                    echo "Testing code"
+                    pwd
+                    ls -lah
+                '''
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying'
+                sh '''
+                    echo "Deploying code"
+                    pwd
+                    ls -lah
+                '''
+            }
+        }
+        
     }
 }
